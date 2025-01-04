@@ -54,4 +54,4 @@ class CustomerFunctionalTest(TestCase):
         url = reverse('deposit_money', args=[self.customer.id])
         response = self.client.post(url, json.dumps({'amount': 500}), content_type='application/json')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()['new_balance'], 1500) # hi
+        self.assertEqual(response.json()['new_balance'], 1500) # hi again
